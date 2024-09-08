@@ -1,5 +1,4 @@
 import React from 'react'
-import Header from '../../Components/Header/Header'
 import Footer from '../../Components/Footer/Footer'
 import Row from '../../Components/Row/Row'
 import requests from '../../request.js'
