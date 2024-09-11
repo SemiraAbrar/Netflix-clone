@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from "react";
 import "./nav.css";
-import NetflixLogo from '../../assets/netflixlogo.jpg'
+import NetflixLogo from '../../assets/netflixlogo.jpg';
 import SearchIcon from "@mui/icons-material/Search";
 import AccountBoxIcon from '@mui/icons-material/AccountBox';
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 function Navbar() {
-  // const [show,handleShow]=useState[false];
-  // useEffect(()=>{
-  //   window.addEventListener("scroll",()=>{
-  //     if(window.scrollY>100){
-  //       handleShow(true);
-  //     }else handleShow(false);
-  //   });
-  //   return ()=>{
-  //     window.removeEventListener("scroll");
-  //   };
-  // },[]);
-  // ${show && "nav__black"}
+     const [show, handleShow] = useState(false);
+
+     useEffect(() => {
+       window.addEventListener("scroll", () => {
+         if (window.scrollY > 100) {
+           handleShow(true);
+         } else handleShow(false);
+       });
+       return () => {
+         window.removeEventListener("scroll", handleShow);
+       };
+     }, []);
+  
   return (
     <>
-      <div className="nav">
+      {/* <header> */}
+      <div className={`nav ${show && "nav__black"} `}>
         <div className="nav__left">
           <ul>
             <li>
@@ -61,7 +63,7 @@ function Navbar() {
             <li>
               <a href="">
                 {" "}
-                <NotificationsNoneIcon />
+                <ArrowDropDownIcon />
               </a>
             </li>
             <li>
@@ -72,7 +74,7 @@ function Navbar() {
             <li>
               <a href="">
                 {" "}
-                <ArrowDropDownIcon />
+                <NotificationsNoneIcon />
               </a>
             </li>
           </ul>

@@ -3,13 +3,13 @@ import Footer from '../../Components/Footer/Footer'
 import Row from '../../Components/Row/Row'
 import requests from '../../request.js'
 import Banner from '../../Components/Banner/Banner.jsx'
-import Navbar from '../../Components/Navbar/Navbar.jsx'
+import Navbar1 from '../../Components/Navbar/Navbar1.jsx'
 function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar1/>
       <Banner/>
-      {/* <Row
+      <Row
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
@@ -21,8 +21,8 @@ function Home() {
       <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
       <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
       <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
-      <Footer /> */}
-      <Footer/>
+      <Footer />
+     
    </>
   );
 }

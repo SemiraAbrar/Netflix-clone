@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import instance from '../Axios'
 import './row.css'
-import movieTrailer from 'movie-trailer'
+import movieTrailer from "movie-trailer";
 import YouTube from 'react-youtube'
 const base_url="https://image.tmdb.org/t/p/original/";
 function Row({title,fetchUrl,isLargeRow}) {
@@ -10,7 +10,7 @@ function Row({title,fetchUrl,isLargeRow}) {
   useEffect(()=>{
     async function fetchData(){
 const request=await instance.get(fetchUrl);
-//console.log(request);
+console.log(request);
  setMovies(request.data.results);
 return request;
     }
@@ -39,10 +39,11 @@ const handleClick=(movie)=>{
 }
 
   return (
-    <div className="row">
+    <div className="rows fs-5">
       <div>{title}</div>
+      {/* console.log(title); */}
       <div className="row__posters">
-        {movies.map((movie) => (
+        {movies?.map((movie) => (
           <img onClick={()=>handleClick(movie)}
             className={`row__poster ${isLargeRow && "row__posterLarge"} `}
             src={`${base_url}${
