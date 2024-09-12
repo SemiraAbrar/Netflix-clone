@@ -24,7 +24,7 @@ function Banner() {
         let n = r.previousElementSibling.previousElementSibling;
         const elements = [ r, n];
         elements.forEach((el) => el.classList.toggle("expanded"));
-        let d = desc.slice(170, desc.length);
+        let d = desc.slice(150, desc.length);
         r.textContent = r.classList.contains("expanded")
           ? "show less"
           : "Learn More";
@@ -33,7 +33,7 @@ function Banner() {
       let desc=movie.overview;
   return (
     <div
-      className="banner "
+      className="banner"
       style={{
         backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
       }}
@@ -50,8 +50,8 @@ function Banner() {
         {movie?.overview && (
           <div className="banner__description ">
           
-            {desc.length > 170? desc.slice(0, 170) : desc}
-            {desc.length > 170 ? (
+            {desc.length > 150? desc.slice(0, 150) : desc}
+            {desc.length > 150 ? (
               <>
                 <span id="remainingdesc">...</span>
                 <br />

@@ -41,7 +41,8 @@
     color: black;
   }
   .navbar-nav li a:hover {
-    opacity: 0.9;
+  color:black;
+  opacity: 0.5;
   }
   .notification,
   .account,

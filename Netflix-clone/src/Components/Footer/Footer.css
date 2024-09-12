@@ -14,11 +14,7 @@
   margin: 5px 30px;
   color: #fff;
 }
-/* .footer__data {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-} */
+
 .footer__data ul {
   list-style: none;
   display: flex;
@@ -26,7 +22,7 @@
   justify-content: space-around;
   align-items: flex-start;
   height: 10vh;
-  width: 100%;
+  width: 150%;
   cursor: pointer;
 }
 .footer__data ul li:hover{
